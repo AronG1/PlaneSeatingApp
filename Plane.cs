@@ -40,6 +40,28 @@ namespace PlaneSeatingApp
             return -1;
         }
 
+        // method for check in seat in economy class
+        public static int CheckInEconomyClassSeat(string name, string lastName)
+        {
+            // check if is there free seat
+            for (int i = NUMFIRSTCLASSROW; i < NUMROW; i++)
+            {
+                for (int j = 0; j < NUMSEAT; j++)
+                {
+                    if (planeArray[i, j] == false)
+                    {
+                        // book seat as taken in array and assign name and lastname to struct
+                        planeArray[i, j] = true;
+                        arrayPassagers[i, j].name = name;
+                        arrayPassagers[i, j].lastName = lastName;
+                        return 1;
+                    }
+                }
+            }
+            // if there isn't free seat
+            return -1;
+        }
+
 
     }
 }

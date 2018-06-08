@@ -29,49 +29,53 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EconomyClassUserControl));
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CheckInEconomyBtn = new System.Windows.Forms.Button();
+            this.NameEconomyTxtBx = new System.Windows.Forms.TextBox();
+            this.LastNameEconomyTxtBx = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.EconomyClassMsgSucFail = new System.Windows.Forms.Label();
+            this.WarningMessageEconomyClass = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // CheckInEconomyBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 16.25F);
-            this.button1.Location = new System.Drawing.Point(132, 297);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 57);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Check in";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.CheckInEconomyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
+            this.CheckInEconomyBtn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.CheckInEconomyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CheckInEconomyBtn.Font = new System.Drawing.Font("Century Gothic", 16.25F);
+            this.CheckInEconomyBtn.Location = new System.Drawing.Point(132, 297);
+            this.CheckInEconomyBtn.Name = "CheckInEconomyBtn";
+            this.CheckInEconomyBtn.Size = new System.Drawing.Size(134, 57);
+            this.CheckInEconomyBtn.TabIndex = 10;
+            this.CheckInEconomyBtn.Text = "Check in";
+            this.CheckInEconomyBtn.UseVisualStyleBackColor = false;
+            this.CheckInEconomyBtn.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // textBox2
+            // NameEconomyTxtBx
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox2.Location = new System.Drawing.Point(184, 172);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 33);
-            this.textBox2.TabIndex = 8;
+            this.NameEconomyTxtBx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
+            this.NameEconomyTxtBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NameEconomyTxtBx.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.NameEconomyTxtBx.Location = new System.Drawing.Point(184, 172);
+            this.NameEconomyTxtBx.Name = "NameEconomyTxtBx";
+            this.NameEconomyTxtBx.Size = new System.Drawing.Size(168, 33);
+            this.NameEconomyTxtBx.TabIndex = 8;
+            this.NameEconomyTxtBx.TextChanged += new System.EventHandler(this.NameEconomyTxtBx_TextChanged);
             // 
-            // textBox1
+            // LastNameEconomyTxtBx
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(184, 227);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 33);
-            this.textBox1.TabIndex = 9;
+            this.LastNameEconomyTxtBx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
+            this.LastNameEconomyTxtBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LastNameEconomyTxtBx.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LastNameEconomyTxtBx.Location = new System.Drawing.Point(184, 227);
+            this.LastNameEconomyTxtBx.Name = "LastNameEconomyTxtBx";
+            this.LastNameEconomyTxtBx.Size = new System.Drawing.Size(168, 33);
+            this.LastNameEconomyTxtBx.TabIndex = 9;
+            this.LastNameEconomyTxtBx.TextChanged += new System.EventHandler(this.LastNameEconomyTxtBx_TextChanged);
             // 
             // label3
             // 
@@ -114,15 +118,39 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // EconomyClassMsgSucFail
+            // 
+            this.EconomyClassMsgSucFail.AutoSize = true;
+            this.EconomyClassMsgSucFail.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.EconomyClassMsgSucFail.Location = new System.Drawing.Point(312, 330);
+            this.EconomyClassMsgSucFail.Name = "EconomyClassMsgSucFail";
+            this.EconomyClassMsgSucFail.Size = new System.Drawing.Size(316, 24);
+            this.EconomyClassMsgSucFail.TabIndex = 13;
+            this.EconomyClassMsgSucFail.Text = "Your seat is booked sucessfuly";
+            this.EconomyClassMsgSucFail.Visible = false;
+            // 
+            // WarningMessageEconomyClass
+            // 
+            this.WarningMessageEconomyClass.AutoSize = true;
+            this.WarningMessageEconomyClass.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.WarningMessageEconomyClass.ForeColor = System.Drawing.Color.Red;
+            this.WarningMessageEconomyClass.Location = new System.Drawing.Point(312, 330);
+            this.WarningMessageEconomyClass.Name = "WarningMessageEconomyClass";
+            this.WarningMessageEconomyClass.Size = new System.Drawing.Size(227, 24);
+            this.WarningMessageEconomyClass.TabIndex = 12;
+            this.WarningMessageEconomyClass.Text = "All fields are required!";
+            // 
             // EconomyClassUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.EconomyClassMsgSucFail);
+            this.Controls.Add(this.WarningMessageEconomyClass);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.CheckInEconomyBtn);
+            this.Controls.Add(this.NameEconomyTxtBx);
+            this.Controls.Add(this.LastNameEconomyTxtBx);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -137,11 +165,13 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button CheckInEconomyBtn;
+        private System.Windows.Forms.TextBox NameEconomyTxtBx;
+        private System.Windows.Forms.TextBox LastNameEconomyTxtBx;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label EconomyClassMsgSucFail;
+        private System.Windows.Forms.Label WarningMessageEconomyClass;
     }
 }
