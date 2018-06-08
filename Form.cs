@@ -22,6 +22,7 @@ namespace PlaneSeatingApp
             SidePanel.Top = HomeBtn.Top;
 
             homeUserControl1.BringToFront();
+            Plane.ReadFromFile();
             
         }
 

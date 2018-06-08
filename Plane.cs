@@ -84,7 +84,41 @@ namespace PlaneSeatingApp
             }
         }
 
+        public static void ReadFromFile()
+        {
+            int i = 0, j = 0;
+            int row = 0, seat = 0;
+            string name, lastName;
+            StreamReader objRead;
+            objRead = new StreamReader(fileName);
+            if (File.Exists(fileName) == true)
+            {
+                while (objRead.Peek() != -1)
+                {
+                    name = objRead.ReadLine();
+                    lastName = objRead.ReadLine();
+                    row = Convert.ToInt32(objRead.ReadLine());
+                    seat = Convert.ToInt32(objRead.ReadLine());
+                    planeArray[row, seat] = true;
+                    arrayPassagers[i, j].name = name;
+                    arrayPassagers[i, j].lastName = lastName;
+                    if (j < NUMSEAT - 1)
+                    {
+                        j++;
+                    }
+                    else
+                    {
+                        i++;
+                        j = 0;
+                    }
 
+                } 
+            }
+            else
+            {
+                // error
+            }
+        }
 
     }
 }
