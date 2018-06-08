@@ -20,14 +20,7 @@ namespace PlaneSeatingApp
     public partial class FirstClassUserControl : UserControl
     {
         int index = 0;
-        const int NUMROW = 10;
-        const int NUMSEAT = 2;
-        const int NUMFIRSTCLASSROW = 2;
-        
-        // array for free or taken seat :: question, is seat taken
-        bool[,] planeArray = new bool[NUMROW, NUMSEAT]; // default value of bool array is FALSE ! 
-        // array of struct
-        Passagers[,] arrayPassagers = new Passagers[NUMROW, NUMSEAT];
+
 
         // on "opening" first class form
         public FirstClassUserControl()
@@ -62,16 +55,20 @@ namespace PlaneSeatingApp
                 CheckInFirstClassBtn.Enabled = false;
 
                 //Plane plane1 = new Plane(); // create instance to plane class
-                //// calls method for check in in first class, passing input of name and lastname, return 1 for sucess or -1 if there is no empty seat
                 //index = plane1.CheckInFirstClassSeat(NameFirstClassTextBx.Text, LastNameFirstClassTxtBx.Text);
+
+                string name = NameFirstClassTextBx.Text;
+                string lastName = LastNameFirstClassTxtBx.Text;
+
                 NameFirstClassTextBx.Text = "";
                 LastNameFirstClassTxtBx.Text = "";
-
-                index = CheckInFirstClassSeat(NameFirstClassTextBx.Text, LastNameFirstClassTxtBx.Text);
+                // calls method for check in in first class, passing input of name and lastname, return 1 for sucess or -1 if there is no empty seat
+                index = WelcomeForm.CheckInFirstClassSeat(name, lastName);
                 if (index == 1)
                 {
                     FirstClassMsgSucFail.Text = "Your seat is booked sucessfuly.";
                     FirstClassMsgSucFail.Visible = true;
+                    
                 }
                 else
                 {
@@ -100,27 +97,7 @@ namespace PlaneSeatingApp
             WarningMessageFirstClass.Visible = false;
             FirstClassMsgSucFail.Visible = false;
         }
-        // method for check in seat in first class
-        public int CheckInFirstClassSeat(string name, string lastName)
-        {
-            // check is there free seat
-            for (int i = 0; i < NUMFIRSTCLASSROW; i++)
-            {
-                for (int j = 0; j < NUMSEAT; j++)
-                {
-                    if (planeArray[i, j] == false)
-                    {
-                        // book seat as taken in array and assign name and lastname to struct
-                        planeArray[i, j] = true;
-                        arrayPassagers[i, j].name = name;
-                        arrayPassagers[i, j].lastName = lastName;
-                        return 1;
-                    }
-                }
-            }
-            // if no free seat
-            return -1;
-        }
+
 
 
     }
