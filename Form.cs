@@ -13,16 +13,6 @@ namespace PlaneSeatingApp
 {
     public partial class WelcomeForm : Form
     {
-        const int NUMROW = 10;
-        const int NUMSEAT = 2;
-        const int NUMFIRSTCLASSROW = 2;
-
-        // array for free or taken seat :: question, is seat taken
-        static bool[,] planeArray = new bool[NUMROW, NUMSEAT]; // default value of bool array is FALSE ! 
-        // array of struct
-        static Passagers[,] arrayPassagers = new Passagers[NUMROW, NUMSEAT];
-
-
         // on opening app
         public WelcomeForm()
         {
@@ -73,29 +63,6 @@ namespace PlaneSeatingApp
             SidePanel.Top = EconomyClassBtn.Top;
 
             economyClassUserControl2.BringToFront();
-        }
-
-        // method for check in seat in first class
-        public static int CheckInFirstClassSeat(string name, string lastName)
-        {
-            // check is there free seat
-            for (int i = 0; i < NUMFIRSTCLASSROW; i++)
-            {
-                for (int j = 0; j < NUMSEAT; j++)
-                {
-                    if (planeArray[i, j] == false)
-                    {
-                        // book seat as taken in array and assign name and lastname to struct
-                        planeArray[i, j] = true;
-                        arrayPassagers[i, j].name = name;
-                        arrayPassagers[i, j].lastName = lastName;
-                        //MessageBox.Show(name + lastName);
-                        return 1;
-                    }
-                }
-            }
-            // if no free seat
-            return -1;
         }
 
 

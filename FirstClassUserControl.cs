@@ -63,7 +63,8 @@ namespace PlaneSeatingApp
                 NameFirstClassTextBx.Text = "";
                 LastNameFirstClassTxtBx.Text = "";
                 // calls method for check in in first class, passing input of name and lastname, return 1 for sucess or -1 if there is no empty seat
-                index = WelcomeForm.CheckInFirstClassSeat(name, lastName);
+                //index = WelcomeForm.CheckInFirstClassSeat(name, lastName);
+                index = Plane.CheckInFirstClassSeat(name, lastName);
                 if (index == 1)
                 {
                     FirstClassMsgSucFail.Text = "Your seat is booked sucessfuly.";
