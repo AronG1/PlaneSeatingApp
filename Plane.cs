@@ -57,6 +57,7 @@ namespace PlaneSeatingApp
                         planeArray[i, j] = true;
                         arrayPassagers[i, j].name = name;
                         arrayPassagers[i, j].lastName = lastName;
+                        PrintInFile(name, lastName, i, j);
                         return 1;
                     }
                 }
@@ -82,6 +83,8 @@ namespace PlaneSeatingApp
                 // error
             }
         }
+
+
 
     }
 }
