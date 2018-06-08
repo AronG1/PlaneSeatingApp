@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace PlaneSeatingApp
 {
@@ -11,6 +12,7 @@ namespace PlaneSeatingApp
         const int NUMROW = 10;
         const int NUMSEAT = 2;
         const int NUMFIRSTCLASSROW = 2;
+        const string fileName = "passagers.txt";
 
         // array for free or taken seat :: question, is seat taken
         static bool[,] planeArray = new bool[NUMROW, NUMSEAT]; // default value of bool array is FALSE ! 
@@ -32,6 +34,7 @@ namespace PlaneSeatingApp
                         planeArray[i, j] = true;
                         arrayPassagers[i, j].name = name;
                         arrayPassagers[i, j].lastName = lastName;
+                        PrintInFile(name, lastName, i, j);
                         return 1;
                     }
                 }
@@ -62,6 +65,23 @@ namespace PlaneSeatingApp
             return -1;
         }
 
+        static private void PrintInFile(string name, string lastName, int row, int seat)
+        {
+            StreamWriter objWrite;
+            objWrite = new StreamWriter(fileName, true);
+            if (File.Exists(fileName) == true)
+            {
+                objWrite.WriteLine(name);
+                objWrite.WriteLine(lastName);
+                objWrite.WriteLine(row);
+                objWrite.WriteLine(seat);
+                objWrite.Close();
+            }
+            else
+            {
+                // error
+            }
+        }
 
     }
 }
