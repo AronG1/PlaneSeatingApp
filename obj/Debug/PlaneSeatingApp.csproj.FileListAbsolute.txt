@@ -1,0 +1,13 @@
+E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\bin\Debug\PlaneSeatingApp.exe.config
+E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\bin\Debug\PlaneSeatingApp.exe
+E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\bin\Debug\PlaneSeatingApp.pdb
+E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.csprojResolveAssemblyReference.cache
+E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.Properties.Resources.resources
+E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.csproj.GenerateResource.Cache
+E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.csproj.CoreCompileInputs.cache
+E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.exe
+E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.pdb
+E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.WelcomeForm.resources
+E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.HomeUserControl.resources
+E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.FirstClassUserControl.resources
+E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.EconomyClassUserControl.resources
