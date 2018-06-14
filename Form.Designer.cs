@@ -49,6 +49,7 @@
             this.homeUserControl1 = new PlaneSeatingApp.HomeUserControl();
             this.economyClassUserControl1 = new PlaneSeatingApp.EconomyClassUserControl();
             this.firstClassUserControl1 = new PlaneSeatingApp.FirstClassUserControl();
+            this.passagerList1 = new PlaneSeatingApp.PassagerListUserControl();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -90,9 +91,10 @@
             this.PrintListBtn.Name = "PrintListBtn";
             this.PrintListBtn.Size = new System.Drawing.Size(190, 80);
             this.PrintListBtn.TabIndex = 0;
-            this.PrintListBtn.Text = "Print passagers list";
+            this.PrintListBtn.Text = "Passagers list";
             this.PrintListBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.PrintListBtn.UseVisualStyleBackColor = true;
+            this.PrintListBtn.Click += new System.EventHandler(this.PrintListBtn_Click);
             // 
             // ChooseSeatBtn
             // 
@@ -292,12 +294,20 @@
             this.firstClassUserControl1.TabIndex = 6;
             this.firstClassUserControl1.Load += new System.EventHandler(this.FirstClassUserControl1_Load);
             // 
+            // passagerList1
+            // 
+            this.passagerList1.Location = new System.Drawing.Point(217, 158);
+            this.passagerList1.Name = "passagerList1";
+            this.passagerList1.Size = new System.Drawing.Size(783, 392);
+            this.passagerList1.TabIndex = 8;
+            // 
             // WelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1000, 550);
+            this.Controls.Add(this.passagerList1);
             this.Controls.Add(this.firstClassUserControl2);
             this.Controls.Add(this.economyClassUserControl2);
             this.Controls.Add(this.homeUserControl1);
@@ -343,6 +353,7 @@
         private EconomyClassUserControl economyClassUserControl2;
         private HomeUserControl homeUserControl1;
         private FirstClassUserControl firstClassUserControl2;
+        private PassagerListUserControl passagerList1;
     }
 }
 

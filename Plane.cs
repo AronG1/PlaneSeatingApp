@@ -9,9 +9,10 @@ namespace PlaneSeatingApp
 {
     class Plane
     {
-        const int NUMROW = 10;
-        const int NUMSEAT = 3;
-        const int NUMFIRSTCLASSROW = 3;
+        // constants that declare plane, plane starts filling with [1, 1]
+        public const int NUMROW = 10 + 1;
+        public const int NUMSEAT = 3 + 1;
+        const int NUMFIRSTCLASSROW = 3 + 1;
         const string fileName = "passagers.txt";
 
         // array for free or taken seat :: question, is seat taken
@@ -19,14 +20,13 @@ namespace PlaneSeatingApp
         // array of struct
         static Passagers[,] arrayPassagers = new Passagers[NUMROW, NUMSEAT];
 
-
         // method for check in seat in first class
         public static int CheckInFirstClassSeat(string name, string lastName)
         {
             // check if is there free seat
-            for (int i = 0; i < NUMFIRSTCLASSROW; i++)
+            for (int i = 1; i < NUMFIRSTCLASSROW; i++)
             {
-                for (int j = 0; j < NUMSEAT; j++)
+                for (int j = 1; j < NUMSEAT; j++)
                 {
                     if (planeArray[i, j] == false)
                     {
@@ -49,7 +49,7 @@ namespace PlaneSeatingApp
             // check if is there free seat
             for (int i = NUMFIRSTCLASSROW; i < NUMROW; i++)
             {
-                for (int j = 0; j < NUMSEAT; j++)
+                for (int j = 1; j < NUMSEAT; j++)
                 {
                     if (planeArray[i, j] == false)
                     {
@@ -66,6 +66,7 @@ namespace PlaneSeatingApp
             return -1;
         }
 
+        // prints passager in file
         static private void PrintInFile(string name, string lastName, int row, int seat)
         {
             StreamWriter objWrite;
@@ -84,10 +85,11 @@ namespace PlaneSeatingApp
             }
         }
 
+        // read all passagers from file
         public static void ReadFromFile()
         {
-            int i = 0, j = 0;
-            int row = 0, seat = 0;
+            int i = 1, j = 1;
+            int row = 1, seat = 1;
             string name, lastName;
             StreamReader objRead;
             objRead = new StreamReader(fileName);
@@ -102,6 +104,8 @@ namespace PlaneSeatingApp
                     planeArray[row, seat] = true;
                     arrayPassagers[i, j].name = name;
                     arrayPassagers[i, j].lastName = lastName;
+                    arrayPassagers[i, j].row = row;
+                    arrayPassagers[i, j].seat = seat;
                     if (j < NUMSEAT - 1)
                     {
                         j++;
@@ -109,7 +113,7 @@ namespace PlaneSeatingApp
                     else
                     {
                         i++;
-                        j = 0;
+                        j = 1;
                     }
 
                 } 
@@ -118,6 +122,12 @@ namespace PlaneSeatingApp
             {
                 // error
             }
+        }
+
+        // return passagers
+        public static Passagers ReadPassagers(int i, int j)
+        {
+            return arrayPassagers[i, j];
         }
 
     }

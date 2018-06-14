@@ -15,6 +15,8 @@ namespace PlaneSeatingApp
     {
         public string name;
         public string lastName;
+        public int row;
+        public int seat;
     }
 
     public partial class FirstClassUserControl : UserControl

@@ -66,7 +66,13 @@ namespace PlaneSeatingApp
             economyClassUserControl2.BringToFront();
         }
 
+        private void PrintListBtn_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = PrintListBtn.Height;
+            SidePanel.Top = PrintListBtn.Top;
 
+            passagerList1.BringToFront();
+        }
 
 
 
@@ -106,6 +112,8 @@ namespace PlaneSeatingApp
         {
 
         }
+
+
     }
  
 

@@ -69,6 +69,12 @@
     <Compile Include="HomeUserControl.Designer.cs">
       <DependentUpon>HomeUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="PassagerListUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PassagerListUserControl.Designer.cs">
+      <DependentUpon>PassagerListUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Plane.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomeUserControl.resx">
       <DependentUpon>HomeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassagerListUserControl.resx">
+      <DependentUpon>PassagerListUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

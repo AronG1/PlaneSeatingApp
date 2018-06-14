@@ -11,3 +11,4 @@ E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.Welcome
 E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.HomeUserControl.resources
 E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.FirstClassUserControl.resources
 E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.EconomyClassUserControl.resources
+E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.PassagerListUserControl.resources
