@@ -10,8 +10,8 @@ namespace PlaneSeatingApp
     class Plane
     {
         const int NUMROW = 10;
-        const int NUMSEAT = 2;
-        const int NUMFIRSTCLASSROW = 2;
+        const int NUMSEAT = 3;
+        const int NUMFIRSTCLASSROW = 3;
         const string fileName = "passagers.txt";
 
         // array for free or taken seat :: question, is seat taken
