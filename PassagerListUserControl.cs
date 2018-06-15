@@ -21,7 +21,7 @@ namespace PlaneSeatingApp
         }
 
         // NEED TO UPDATE
-        void FillPassagers()
+        private void FillPassagers()
         {
             LstViewName.Clear();
             LstViewLastName.Clear();
@@ -42,7 +42,6 @@ namespace PlaneSeatingApp
                         LstViewLastName.Items.Add(array[i, j].lastName);
                         LstViewRow.Items.Add(array[i, j].row.ToString());
                         LstViewSeat.Items.Add(array[i, j].seat.ToString());
-                        LstViewSeat.Refresh();
                     }
                 }
             }
@@ -56,7 +55,7 @@ namespace PlaneSeatingApp
 
         private void PassagerListUserControl_Load(object sender, EventArgs e)
         {
-            FillPassagers();
+
         }
 
         private void PassagerListUserControl_DragOver(object sender, DragEventArgs e)
@@ -66,7 +65,17 @@ namespace PlaneSeatingApp
 
         private void PassagerListUserControl_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void PassagerListUserControl_Move(object sender, EventArgs e)
+        {
             
+        }
+
+        private void PassagerListUserControl_VisibleChanged(object sender, EventArgs e)
+        {
+            FillPassagers();
         }
     }
 }

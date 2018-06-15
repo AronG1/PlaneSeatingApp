@@ -155,8 +155,10 @@
             this.Name = "PassagerListUserControl";
             this.Size = new System.Drawing.Size(783, 392);
             this.Load += new System.EventHandler(this.PassagerListUserControl_Load);
+            this.VisibleChanged += new System.EventHandler(this.PassagerListUserControl_VisibleChanged);
             this.DragOver += new System.Windows.Forms.DragEventHandler(this.PassagerListUserControl_DragOver);
             this.Enter += new System.EventHandler(this.PassagerListUserControl_Enter);
+            this.Move += new System.EventHandler(this.PassagerListUserControl_Move);
             this.ResumeLayout(false);
             this.PerformLayout();
 

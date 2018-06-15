@@ -37,7 +37,7 @@ namespace PlaneSeatingApp
         {
             SidePanel.Height = HomeBtn.Height;
             SidePanel.Top = HomeBtn.Top;
-
+            
             homeUserControl1.BringToFront();
         }
 
@@ -52,6 +52,7 @@ namespace PlaneSeatingApp
         {
             SidePanel.Height = FirstClassBtn.Height;
             SidePanel.Top = FirstClassBtn.Top;
+
 
             firstClassUserControl2.BringToFront();
             
@@ -71,6 +72,8 @@ namespace PlaneSeatingApp
             SidePanel.Height = PrintListBtn.Height;
             SidePanel.Top = PrintListBtn.Top;
 
+            passagerList1.Visible = false;
+            passagerList1.Visible = true;
             passagerList1.BringToFront();
         }
 
@@ -113,7 +116,10 @@ namespace PlaneSeatingApp
 
         }
 
+        private void firstClassUserControl2_LocationChanged(object sender, EventArgs e)
+        {
 
+        }
     }
  
 

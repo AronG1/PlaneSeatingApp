@@ -258,6 +258,7 @@
             this.firstClassUserControl2.Size = new System.Drawing.Size(783, 392);
             this.firstClassUserControl2.TabIndex = 7;
             this.firstClassUserControl2.Load += new System.EventHandler(this.firstClassUserControl2_Load_1);
+            this.firstClassUserControl2.LocationChanged += new System.EventHandler(this.firstClassUserControl2_LocationChanged);
             // 
             // economyClassUserControl2
             // 
@@ -296,6 +297,7 @@
             // 
             // passagerList1
             // 
+            this.passagerList1.BackColor = System.Drawing.SystemColors.Control;
             this.passagerList1.Location = new System.Drawing.Point(217, 158);
             this.passagerList1.Name = "passagerList1";
             this.passagerList1.Size = new System.Drawing.Size(783, 392);
@@ -307,7 +309,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1000, 550);
-            this.Controls.Add(this.passagerList1);
             this.Controls.Add(this.firstClassUserControl2);
             this.Controls.Add(this.economyClassUserControl2);
             this.Controls.Add(this.homeUserControl1);
@@ -316,6 +317,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.passagerList1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WelcomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
