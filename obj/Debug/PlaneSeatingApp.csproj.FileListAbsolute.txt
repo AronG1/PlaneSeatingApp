@@ -12,3 +12,5 @@ E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.HomeUse
 E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.FirstClassUserControl.resources
 E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.EconomyClassUserControl.resources
 E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\obj\Debug\PlaneSeatingApp.PassagerListUserControl.resources
+E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\bin\Debug\Passagers.mdf
+E:\Buisness\C#\PlaneSeatingApp\PlaneSeatingApp\bin\Debug\Passagers_log.ldf

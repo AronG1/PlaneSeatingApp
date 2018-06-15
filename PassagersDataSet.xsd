@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PassagersDataSet" targetNamespace="http://tempuri.org/PassagersDataSet.xsd" xmlns:mstns="http://tempuri.org/PassagersDataSet.xsd" xmlns="http://tempuri.org/PassagersDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Passagers.mdf;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="Passagers.mdf" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PassagerTableAdapter" GeneratorDataComponentClassName="PassagerTableAdapter" Name="Passager" UserDataComponentName="PassagerTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Passagers.mdf" DbObjectName="dbo.Passager" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Name, LastName, Row, Seat FROM dbo.Passager</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="Row" DataSetColumn="Row" />
+              <Mapping SourceColumn="Seat" DataSetColumn="Seat" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PassagersDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PassagersDataSet" msprop:Generator_UserDSName="PassagersDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Passager" msprop:Generator_TableClassName="PassagerDataTable" msprop:Generator_TableVarName="tablePassager" msprop:Generator_TablePropName="Passager" msprop:Generator_RowDeletingName="PassagerRowDeleting" msprop:Generator_RowChangingName="PassagerRowChanging" msprop:Generator_RowEvHandlerName="PassagerRowChangeEventHandler" msprop:Generator_RowDeletedName="PassagerRowDeleted" msprop:Generator_UserTableName="Passager" msprop:Generator_RowChangedName="PassagerRowChanged" msprop:Generator_RowEvArgName="PassagerRowChangeEvent" msprop:Generator_RowClassName="PassagerRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Row" msprop:Generator_ColumnVarNameInTable="columnRow" msprop:Generator_ColumnPropNameInRow="Row" msprop:Generator_ColumnPropNameInTable="RowColumn" msprop:Generator_UserColumnName="Row" type="xs:int" minOccurs="0" />
+              <xs:element name="Seat" msprop:Generator_ColumnVarNameInTable="columnSeat" msprop:Generator_ColumnPropNameInRow="Seat" msprop:Generator_ColumnPropNameInTable="SeatColumn" msprop:Generator_UserColumnName="Seat" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
